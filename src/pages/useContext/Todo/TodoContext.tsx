@@ -14,6 +14,7 @@ const initTodoContext: TodoContextType = {
   };
   
 
+//create conetxt
 const TodoContext = createContext<TodoContextType>(initTodoContext);
 
 type ChildrenType = {

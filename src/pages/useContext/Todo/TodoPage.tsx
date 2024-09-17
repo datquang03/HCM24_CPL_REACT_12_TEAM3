@@ -1,6 +1,5 @@
 import React, { useContext, useState, ChangeEvent } from "react";
 import { TodoContext } from "./TodoContext";
-import "./style/todo.css";
 
 const TodoPage = () => {
   const { todos, addTodo, deleteTodo } = useContext(TodoContext);
@@ -21,30 +20,43 @@ const TodoPage = () => {
   };
 
   return (
-    <div>
-      <div className="todo_container">
-        <h1>Todo List</h1>
-        <div className="todo_add">
+    <div className="flex items-center justify-center">
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
+        <h1 className="text-3xl font-bold text-center mb-6">Todo List</h1>
+
+        <div className="flex mb-4">
           <input
             type="text"
             value={todoName}
             onChange={handleOnChange}
             placeholder="Enter todo"
+            className=" px-4 py-2 border rounded-lg shadow-sm focus:outline-none "
           />
-          <button onClick={handleAddTodo}>Add</button>
+          <button
+            onClick={handleAddTodo}
+            className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          >
+            Add
+          </button>
         </div>
-        <div className="todo_list">
+
+        <div className="space-y-4">
           {todos.map((todo) => {
             return (
-              <div key={todo.id} className="todo_item">
-                <div>{todo.id}</div>
-                <div>{todo.todoName}</div>
-                <div>{todo.completed ? "Completed" : "In Progress"}</div>
-                <div>
-                  <button onClick={() => handleDeleteTodo(todo.id)}>
-                    Delete
-                  </button>
+              <div
+                key={todo.id}
+                className="p-4 border rounded-lg shadow-sm flex justify-between items-center bg-gray-50"
+              >
+                <div className="flex-1 text-sm font-semibold">{todo.todoName}</div>
+                <div className="text-sm text-gray-500">
+                  {todo.completed ? "Completed" : "In Progress"}
                 </div>
+                <button
+                  onClick={() => handleDeleteTodo(todo.id)}
+                  className="flex-1 ml-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 "
+                >
+                  Delete
+                </button>
               </div>
             );
           })}
