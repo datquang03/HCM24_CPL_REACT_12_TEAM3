@@ -76,7 +76,7 @@ const Navbar = () => {
               className="buttons"
               onClick={() => navigationPath("/interface")}
             >
-              Interface
+              Interface, Type
             </button>
             <button
               className="buttons"
