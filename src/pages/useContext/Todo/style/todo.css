@@ -1,0 +1,10 @@
+.todo_item{
+    display: flex;
+    border-bottom: 1px solid red;
+
+}
+.todo_item div{
+    padding: 5px;
+    margin: 1rem;
+    flex: 1;
+}
