@@ -10,6 +10,18 @@ const UnionTypesPage = () => {
         Union types in TypeScript are versatile and can be used in various
         scenarios to enhance type safety and flexibility.
       </p>
+      <h2 className="text-l font-semibold pt-2">Syntax</h2>
+      <p>
+        The syntax for a union type is to separate the types with a pipe (
+        <span className="bg-slate-200 rounded-md px-1 pb-1 ">|</span>)
+        character.
+      </p>
+      <h2 className="text-l font-semibold pt-2">Example</h2>
+      <p >
+        <span className="text-blue-600">let</span> value:{" "}
+        <span className="text-cyan-600">string</span> |{" "}
+        <span className="text-cyan-600">number</span>;
+      </p>
       <h2 className="text-l font-semibold pt-2">Function Parameter</h2>
       <p>
         The input field below accepts either a number or a string. The entered
