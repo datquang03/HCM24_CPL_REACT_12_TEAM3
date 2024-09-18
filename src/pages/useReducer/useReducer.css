@@ -1,0 +1,20 @@
+.useReducer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.useReducer-buttons {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+.useReducer-buttons:hover {
+  transform: scale(1.2);
+}
