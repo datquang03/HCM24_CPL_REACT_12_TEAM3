@@ -14,6 +14,9 @@ const ContextConcept = () => {
           <code className="bg-gray-200 p-1 rounded-md"> Context.Provider </code> and child components can directly access the data using 
           <code className="bg-gray-200 p-1 rounded-md"> useContext </code>.
         </p>
+        <div>
+          <img src="./src/assets/context.png" alt="" />
+        </div>
         <h2 className="text-xl font-medium mt-4 mb-2 text-gray-800">Usage:</h2>
         <ul className="list-disc ml-6 text-gray-700">
           <li>Manage state globally</li>
