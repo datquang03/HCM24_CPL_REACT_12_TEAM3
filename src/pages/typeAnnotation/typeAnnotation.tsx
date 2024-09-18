@@ -10,18 +10,17 @@ const TypeAnnotationPage: React.FC = () => {
 
   // Arrays
   let names: string[] = ["John", "Jane", "Peter", "David", "Mary"]; // Mảng chuỗi
-  // let numbers: number[] = [1, 2, 3, 4, 5]; // Mảng số
 
-  // Objects
-  let person: {
-    name: string;
-    age: number;
-  };
+  // // Objects
+  // let person: {
+  //   name: string;
+  //   age: number;
+  // };
 
-  person = {
-    name: "John",
-    age: 25,
-  }; // valid
+  // person = {
+  //   name: "John",
+  //   age: 25,
+  // }; // valid
 
   // Functions
   let greeting: (name: string) => string; // Hàm nhận vào tham số name (string) và trả về chuỗi

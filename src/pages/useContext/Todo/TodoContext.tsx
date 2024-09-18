@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import { createContext, useReducer } from "react";
 import { TodoType, todoTypes, todoReducer, initState } from "./todoReducer";
 
 type TodoContextType = {
@@ -8,11 +8,10 @@ type TodoContextType = {
 };
 
 const initTodoContext: TodoContextType = {
-    todos: initState,  
-    addTodo: () => null,
-    deleteTodo: () => null,
-  };
-  
+  todos: initState,
+  addTodo: () => null,
+  deleteTodo: () => null,
+};
 
 //create conetxt
 const TodoContext = createContext<TodoContextType>(initTodoContext);

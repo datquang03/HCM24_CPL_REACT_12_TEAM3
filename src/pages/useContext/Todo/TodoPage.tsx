@@ -1,4 +1,4 @@
-import React, { useContext, useState, ChangeEvent } from "react";
+import { useContext, useState, ChangeEvent } from "react";
 import { TodoContext } from "./TodoContext";
 
 const TodoPage = () => {
@@ -47,7 +47,9 @@ const TodoPage = () => {
                 key={todo.id}
                 className="p-4 border rounded-lg shadow-sm flex justify-between items-center bg-gray-50"
               >
-                <div className="flex-1 text-sm font-semibold">{todo.todoName}</div>
+                <div className="flex-1 text-sm font-semibold">
+                  {todo.todoName}
+                </div>
                 <div className="text-sm text-gray-500">
                   {todo.completed ? "Completed" : "In Progress"}
                 </div>
