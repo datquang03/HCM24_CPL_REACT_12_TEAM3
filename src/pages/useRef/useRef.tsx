@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import "./useRef.css";
 const UseRefPage = () => {
   // Tạo một tham chiếu đến input element

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface User {
   id: number;
@@ -12,14 +12,17 @@ interface ChildComponentProps {
   number: number;
 }
 
-const ChildComponent: React.FC<ChildComponentProps> = ({ getUsers, number }) => {
+const ChildComponent: React.FC<ChildComponentProps> = ({
+  getUsers,
+  number,
+}) => {
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
-      console.log(`Component ${number} function rendered`)
-      getUsers().then((data) => setUsers(data));
-      //getUsers().then((data) => setUsers((prev) => [...prev, ...data]));
-    }, [getUsers,number]);
+    console.log(`Component ${number} function rendered`);
+    getUsers().then((data) => setUsers(data));
+    //getUsers().then((data) => setUsers((prev) => [...prev, ...data]));
+  }, [getUsers, number]);
 
   return (
     <div>

@@ -1,12 +1,12 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 
 const UseMemo = () => {
   const [count, setCount] = useState(0);
   const [inputValue, setInputValue] = useState("");
   const calculatedValue = useMemo(() => {
     console.log("Calculating...");
-    return count * 2; 
-  }, [count]); 
+    return count * 2;
+  }, [count]);
   return (
     <div>
       <h1>Demo useMemo</h1>
